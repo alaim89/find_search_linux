@@ -1,0 +1,26 @@
+# SED
+
+```
+sed [Option(en)] 'Kommando(s)' [Datei(en)]
+```
+
+### Datenstrom auslesen
+
+```
+sed 's/deutsch/englisch/g' land.txt
+```
+
+```
+sed 's/deutsch/englisch/' land.txt
+```
+
+
+### Datenstrom aendern
+
+```
+sed -i 's/deutsch/englisch/g' land.txt
+```
+
+
+
+

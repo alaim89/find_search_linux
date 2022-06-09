@@ -1,1 +1,4 @@
-# find_search_linux
+# find
+
+# sed
+# cut

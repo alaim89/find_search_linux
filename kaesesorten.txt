@@ -1,0 +1,12 @@
+        Sorten                  Land            Milch
+1       Passendale              Belgien         Kuh               
+2       Kaschkawal              Bulgarien       Schaf-Kuh
+3       Havarti                 Dänemark        Kuh
+4       Harzerkaese             Deutschland     Kuh
+5       Kochkäse                Deutschland
+6       Etorki                  Frankreich      Schaf
+7       Pecorino Sardo          Italien         Schaf
+8       Puzzone di Moena        Italien         Kuh
+9       Gouda                   Niederlande     Kuhmilch
+10      Berner Alpkäse          Schweiz         Kuhroh
+milch
