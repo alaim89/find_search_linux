@@ -7,20 +7,45 @@ sed [Option(en)] 'Kommando(s)' [Datei(en)]
 ### Datenstrom auslesen
 
 ```
-sed 's/deutsch/englisch/g' land.txt
+sed 's/deutsch/englisch/g' kaesesorten.txt
 ```
 
 ```
-sed 's/deutsch/englisch/' land.txt
+sed 's/deutsch/englisch/' kaesesorten.txt
 ```
 
 
 ### Datenstrom aendern
 
 ```
-sed -i 's/deutsch/englisch/g' land.txt
+sed -i 's/deutsch/englisch/g' kaesesorten.txt
 ```
 
+## Textdatei durchsuchen
 
+```
+sed -n -e '1p' -e '/kaese/p' kaesesorten.txt
+
+        Sorten                  Land            Milch-Art
+4       Harzerkaese             Deutschland     Kuh
+5       Kochkaese               Deutschland     -
+
+```
+
+```
+sed -n -e '1p' -e '/Belgien/p' kaesesorten.txt
+
+        Sorten                  Land            Milch-Art
+1       Passendale              Belgien         Kuh               
+```
+
+```
+sed -n -e '1p' -e '/Schaf/p' kaesesorten.txt
+
+        Sorten                  Land            Milch-Art
+2       Kaschkawal              Bulgarien       Schaf-Kuh
+6       Etorki                  Frankreich      Schaf
+7       Pecorino Sardo          Italien         Schaf        
+```
 
 
