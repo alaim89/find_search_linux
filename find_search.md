@@ -32,4 +32,4 @@ andrew_day.jpg Adidas.jpg aAl_glatt.jpg
 ```
 
 
-# WAs haben wir davon?
+# Was haben wir davon?
