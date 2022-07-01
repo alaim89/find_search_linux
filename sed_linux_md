@@ -1,29 +1,29 @@
 # SED
 
-```
+```bash
 sed [Option(en)] 'Kommando(s)' [Datei(en)]
 ```
 
 ### Datenstrom auslesen
 
-```
+```bash
 sed 's/deutsch/englisch/g' kaesesorten.txt
 ```
 
-```
+```bash
 sed 's/deutsch/englisch/' kaesesorten.txt
 ```
 
 
 ### Datenstrom aendern
 
-```
+```bash
 sed -i 's/deutsch/englisch/g' kaesesorten.txt
 ```
 
 ## Textdatei durchsuchen
 
-```
+```bash
 sed -n -e '1p' -e '/kaese/p' kaesesorten.txt
 
         Sorten                  Land            Milch-Art
@@ -32,14 +32,14 @@ sed -n -e '1p' -e '/kaese/p' kaesesorten.txt
 
 ```
 
-```
+```bash
 sed -n -e '1p' -e '/Belgien/p' kaesesorten.txt
 
         Sorten                  Land            Milch-Art
 1       Passendale              Belgien         Kuh               
 ```
 
-```
+```bash
 sed -n -e '1p' -e '/Schaf/p' kaesesorten.txt
 
         Sorten                  Land            Milch-Art
@@ -47,5 +47,32 @@ sed -n -e '1p' -e '/Schaf/p' kaesesorten.txt
 6       Etorki                  Frankreich      Schaf
 7       Pecorino Sardo          Italien         Schaf        
 ```
+
+## Informationen hinzufuegen
+
+```bash
+less kaesesorten.txt
+        Sorten                  Land            Milch-Art
+1       Passendale              Belgien         Kuh               
+2       Kaschkawal              Bulgarien       Schaf-Kuh
+3       Havarti                 Dänemark        Kuh
+4       Harzerkaese             Deutschland     Kuh
+5       Kochkaese               Deutschland     -
+6       Etorki                  Frankreich      Schaf
+7       Pecorino Sardo          Italien         Schaf
+8       Puzzone di Moena        Italien         Kuh
+9       Gouda                   Niederlande     Kuhmilch
+10      Berner Alpkäse          Schweiz         Kuhroh
+
+sed -i -e '$a2 Hartbrei Serbien Schaf-Ziege' -e '$a4 Breoui Frankreich Ziege' kaesesorten.txt
+...
+9       Gouda                   Niederlande     Kuhmilch
+10      Berner Alpkäse          Schweiz         Kuhroh
+2 Hartbrei Serbien Schaf-Ziege
+4 Breoui Frankreich Ziege
+
+     
+```
+
 
 
